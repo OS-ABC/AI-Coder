@@ -1,0 +1,40 @@
+<idea-plugin>
+  <id>com.yang.pku.coder_aider</id>
+  <name>Code Sentence Completion for PyCharm</name>
+  <version>1.0</version>
+  <vendor email="yang_kang@pku.edu.cn" url="http://pku.edu.cn">PKU_yang</vendor>
+
+  <description><![CDATA[
+      Able to autocomplete for code sentences.<br>
+      <em>Able to autocomplete for code sentences
+    ]]></description>
+
+<!--  <change-notes><![CDATA[-->
+<!--      Able to autocomplete for code sentences.<br>-->
+<!--      <em>Able to autocomplete for code sentence</em>-->
+<!--    ]]>-->
+<!--  </change-notes>-->
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="203.6682.179"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!--json-lib-->
+  since-build
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <completion.contributor order="FIRST" language="any" implementationClass="SimpleCompletionContributor"/>
+  </extensions>
+
+<!--   <actions>    -->
+    <!-- Add your actions here -->
+<!--     <action id="Test_Code_Completion" class="Test_Code_Completion" text="My_Test_Code_Completion"
+            description="Test_Code_Completion">
+      <add-to-group group-id="MainMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt Z"/>
+    </action>   
+  </actions>    -->
+
+</idea-plugin>
