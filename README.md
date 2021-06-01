@@ -1,11 +1,28 @@
 # AI-Coder
-AI-Coder是一种基于PyCharm的代码句补全插件。
+AI-Coder是一款基于PyCharm的代码句补全插件。
 
+其补全效果如下：  
+
+<div align=center><img src="doc/img/code_completion_result_1.jpg" width = 60% height = 60% /></div> 
+    
+<div align=center> 句中调用代码句补全 </div> 
+  
+  &nbsp;
+
+
+<div align=center><img src="doc/img/code_completion_result_2.jpg" width = 60% height = 60% /></div>  
+
+<div align=center> 句间调用代码句补全 </div>   
+
+  &nbsp;
+  
+## 目录结构
 - backend——代码句补全服务器
 - dataset——训练数据集
 - model——代码句补全模型
 - plugin——插件开发配置
 
+  &nbsp;
 
 ## 服务器
 代码句补全服务器尝试了两种框架，分别是Flask和Crow。
@@ -29,11 +46,15 @@ AI-Coder是一种基于PyCharm的代码句补全插件。
 ### [Crow](https://github.com/ipkn/crow)
 Crow是一个轻量级的Web服务器框架，这个框架是受Python下的Flask启发的，其实现的功能和Flask基本一致，核心的区别在于Crow是用C++编写的，性能较Flask有一定的提升。
 
+  &nbsp;
+  
 ## 数据集
 数据集有两个，第一个是Keras领域的代码数据，第二个是TensorFlow领域的代码数据。  
 
 代码数据中均删除了参数。
 
+  &nbsp;
+  
 
 ## 模型
 ### 深度学习环境
@@ -66,6 +87,8 @@ Crow是一个轻量级的Web服务器框架，这个框架是受Python下的Flas
   
 注：模型文件类型为ipynb，需要用jupyter打开。
 
+  &nbsp;
+  
 
 ## 插件
 
@@ -85,14 +108,14 @@ Crow是一个轻量级的Web服务器框架，这个框架是受Python下的Flas
 
 1) 在IDEA中选择项目根目录右键Open module settings
 
-<img src="doc/img/plugin_step1.jpg" width="50%"/>
+<div align=center><img src="doc/img/plugin_step1.jpg" width="50%"/></div>  
 
 设置项目的SDK为本机安装的Pycharm社区版，新建一个SDK，路径选择为安装的pycharm社区版根目录
 
-<img src="doc/img/plugin_step2.jpg" width="50%"/>
+<div align=center><img src="doc/img/plugin_step2.jpg" width="50%"/></div>  
 
-<img src="doc/img/plugin_step3.jpg" width="50%"/>
+<div align=center><img src="doc/img/plugin_step3.jpg" width="50%"/></div>  
 
 2) 运行项目时会启动一个Pycahrm 窗口，是带有我们这个插件效果的。
 
-<img src="doc/img/plugin_example.jpg" width="50%"/>
+<div align=center><img src="doc/img/plugin_example.jpg" width="50%"/></div>  
